@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="#" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Rock Paper Sissors</title>
+  </head>
+  <body>
+    <section class="game">
+      <div class="score">
+        <div class="player-score">
+          <h1>Player</h1>
+          <p>0</p>
+        </div>
+        <div class="computer-score">
+          <h1>Computer</h1>
+          <p>0</p>
+        </div>
+      </div>
+
+      <div class="intro">
+        <h1>Rock Paper Scissors</h1>
+        <button>Let's Play</button>
+      </div>
+
+      <div class="match fadeOut">
+        <h2 class="winner">Choose an option</h2>
+        <div class="hands">
+          <img class="player-hand" src="images/rock.png" alt="rock" />
+          <img class="computer-hand" src="images/rock.png" alt="rock" />
+        </div>
+        <div class="options">
+          <button class="rock">rock</button>
+          <button class="paper">paper</button>
+          <button class="scissors">scissors</button>
+          <audio
+            class="audio-click"
+            src="audio/mixkit-arcade-game-jump-coin-216.wav"
+          ></audio>
+        </div>
+
+        <audio src="audio/Monkeys-Spinning-Monkeys.mp3" class="bg-audio" loop></audio>
+        <audio
+          class="audio-winner"
+          src="audio/mixkit-fairy-cartoon-success-voice-344.wav"
+        ></audio>
+        <audio
+          src="audio/mixkit-player-losing-or-failing-2042.wav"
+          class="audio-lose"
+        ></audio>
+      </div>
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>

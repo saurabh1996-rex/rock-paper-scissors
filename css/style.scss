@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  min-height: 100vh;
+  background: rgb(22, 22, 22);
+  font-family: "Poppins", sans-serif;
+}
+
+.score {
+  color: rgb(196, 195, 195);
+  height: 20vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.score h1 {
+  font-size: 2rem;
+}
+
+.score p {
+  text-align: center;
+  font-size: 20px;
+  padding-top: 1rem;
+}
+
+.intro {
+  height: 50vh;
+  color: rgb(196, 195, 195);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transition: opacity 0.5s ease;
+}
+
+.intro h1 {
+  font-size: 3.5rem;
+}
+
+.intro button,
+.match button {
+  font-family: "Poppins", sans-serif;
+  width: 8rem;
+  height: 3rem;
+  font-size: 1rem;
+  color: #161616;
+  border: none;
+  background: #00c6cf;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.match {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.5s ease 0.5s;
+}
+
+.winner {
+  color: rgb(196, 195, 195);
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+.hands,
+.options {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.hands {
+  padding: 1rem 0 3rem 0;
+}
+
+.player-hand {
+  transform: rotateY(180deg);
+}
+
+div.fadeOut {
+  opacity: 0;
+  pointer-events: none;
+}
+
+div.fadeIn {
+  opacity: 1;
+  pointer-events: all;
+}
+
+@keyframes shakePlayer {
+  0% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  15% {
+    transform: rotateY(180deg) translateY(-50px);
+  }
+  25% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  35% {
+    transform: rotateY(180deg) translateY(-50px);
+  }
+  50% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  75% {
+    transform: rotateY(180deg) translateY(-50px);
+  }
+  85% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+
+  100% {
+    transform: rotateY(180deg) translateY(-50px);
+  }
+}
+@keyframes shakeComputer {
+  0% {
+    transform: translateY(0px);
+  }
+  15% {
+    transform: translateY(-50px);
+  }
+  25% {
+    transform: translateY(0px);
+  }
+  35% {
+    transform: translateY(-50px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(-50px);
+  }
+  85% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(-50px);
+  }
+}
+
+// Mobile
+
+@media (max-width: 760px) {
+  .winner {
+    font-size: 1.6rem;
+  }
+  .hands {
+    padding: 0.2rem 0 1rem 0;
+  }
+  .intro button,
+  .match button {
+    width: 4.5rem;
+    height: 2rem;
+    font-size: 0.8rem;
+  }
+  .intro h1 {
+    font-size: 1.6rem;
+  }
+  .intro {
+    height: 70vh;
+  }
+  .score h1 {
+    font-size: 1.6rem;
+  }
+
+  .score p {
+    font-size: 15px;
+    padding-top: 0.5rem;
+  }
+  .options {
+    display: flex;
+    flex-direction: column;
+  }
+  .paper {
+    margin: 1rem 0;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
