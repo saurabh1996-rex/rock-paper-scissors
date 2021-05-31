@@ -69,14 +69,21 @@ const game = () => {
     const options = document.querySelector(".options");
     const bgAudio = document.querySelector(".bg-audio");
 
-    if (pScore || cScore == 5) {
-      winner.textContent =
-        pScore == 5 ? `You are the Real Winner` : `Computer is the Real Winner`;
+     if (pScore == 5) {
+      winner.textContent = `You are the Real Winner`;
       match.classList.add("fadeOut");
       score.classList.add("fadeOut");
       options.classList.add("fadeOut");
       bgAudio.pause();
-    } else {
+      return;
+    } else if (cScore == 5) {
+      winner.textContent = `Computer is the Real Winner`;
+      match.classList.add("fadeOut");
+      score.classList.add("fadeOut");
+      options.classList.add("fadeOut");
+      bgAudio.pause();
+      return;
+    }  else {
       if (playerChoice === computerChoice) {
         winner.textContent = `It's a tie`;
         return;
